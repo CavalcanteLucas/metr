@@ -1,0 +1,47 @@
+version: '3.9'
+
+services:
+  web:
+    container_name: metr-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: >
+      bash -c "
+        sleep 2 &&
+        python manage.py makemigrations &&
+        python manage.py migrate &&
+        python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    volumes:
+      - .:/code
+    env_file:
+      - .env
+    environment:
+      - DB_HOST=${DB_HOST:-db}
+
+  db:
+    container_name: metr-db
+    image: postgres:14.1-alpine
+    ports:
+      - "5433:5433"
+    command: -p 5433
+    volumes:
+      - postgres_data:/var/lib/postgresql@14/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 2s
+      timeout: 3s
+      retries: 3
+    env_file:
+      - .env
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-postgres}
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-password}
+
+volumes:
+  postgres_data:
