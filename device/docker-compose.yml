@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  metr-device-rabbitmq:
+    container_name: metr-device-rabbitmq
+    image: rabbitmq
+    ports:
+      - 5672:5672
+      - 15692:15692
+    volumes:
+      - rabbit_mqdata:/usr/share/rabbitmq/data
+    networks:
+      - metr-network
+
+  metr-device-consumer:
+    container_name: metr-device-consumer
+    build:
+      context: .
+      dockerfile: Dockerfile.consumer
+    depends_on:
+      - metr-device-rabbitmq
+    links:
+      - metr-device-rabbitmq
+    networks:
+      - metr-network
+
+  metr-device-producer:
+    container_name: metr-device-producer
+    build:
+      context: .
+      dockerfile: Dockerfile.producer
+    depends_on:
+      - metr-device-rabbitmq
+    links:
+      - metr-device-rabbitmq
+    networks:
+      - metr-network
+
+volumes:
+    rabbit_mqdata:
+      driver: local
+
+networks:
+  metr-network:
+    external: true

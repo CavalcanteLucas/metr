@@ -1,0 +1,402 @@
+[
+  {
+    "data": [
+      {
+        "value": "2020-06-26T06:49:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (time & date)",
+        "storagenr": 0
+      },
+      {
+        "value": 29690,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Energy (kWh)",
+        "storagenr": 0
+      },
+      {
+        "value": "2019-09-30T00:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (date)",
+        "storagenr": 1
+      },
+      {
+        "value": 16274,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Energy (kWh)",
+        "storagenr": 1
+      }
+    ],
+    "device": {
+      "type": 4,
+      "status": 0,
+      "identnr": 83251076,
+      "version": 0,
+      "accessnr": 156,
+      "manufacturer": 5317
+    }
+  },
+  {
+    "data": [
+      {
+        "value": "2020-06-26T09:10:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (time & date)",
+        "storagenr": 0
+      },
+      {
+        "value": 0,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 0
+      },
+      {
+        "value": "2019-09-30T00:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (date)",
+        "storagenr": 1
+      },
+      {
+        "value": 0,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 1
+      }
+    ],
+    "device": {
+      "type": 8,
+      "status": 0,
+      "identnr": 83110167,
+      "version": 37,
+      "accessnr": 242,
+      "manufacturer": 5317
+    }
+  },
+  {
+    "data": [
+      {
+        "value": "2020-06-26T08:45:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (time & date)",
+        "storagenr": 0
+      },
+      {
+        "value": 0,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 0
+      },
+      {
+        "value": "2019-09-30T00:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (date)",
+        "storagenr": 1
+      },
+      {
+        "value": 0,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 1
+      }
+    ],
+    "device": {
+      "type": 8,
+      "status": 0,
+      "identnr": 83110632,
+      "version": 37,
+      "accessnr": 145,
+      "manufacturer": 5317
+    }
+  },
+  {
+    "data": [
+      {
+        "value": "2020-06-26T06:13:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (time & date)",
+        "storagenr": 0
+      },
+      {
+        "value": 13851,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Volume (m m^3)",
+        "storagenr": 0
+      },
+      {
+        "value": "2019-09-30T00:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (date)",
+        "storagenr": 1
+      },
+      {
+        "value": 2150,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Volume (m m^3)",
+        "storagenr": 1
+      }
+    ],
+    "device": {
+      "type": 6,
+      "status": 0,
+      "identnr": 83200808,
+      "version": 0,
+      "accessnr": 150,
+      "manufacturer": 5317
+    }
+  },
+  {
+    "data": [
+      {
+        "value": "2020-06-26T06:06:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (time & date)",
+        "storagenr": 0
+      },
+      {
+        "value": 331,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Volume (m m^3)",
+        "storagenr": 0
+      },
+      {
+        "value": "2019-09-30T00:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (date)",
+        "storagenr": 1
+      },
+      {
+        "value": 331,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Volume (m m^3)",
+        "storagenr": 1
+      }
+    ],
+    "device": {
+      "type": 7,
+      "status": 11,
+      "identnr": 82201032,
+      "version": 0,
+      "accessnr": 242,
+      "manufacturer": 5317
+    }
+  },
+  {
+    "data": [
+      {
+        "value": "2020-06-26T06:02:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (time & date)",
+        "storagenr": 0
+      },
+      {
+        "value": 170,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 0
+      },
+      {
+        "value": "2019-09-30T00:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (date)",
+        "storagenr": 1
+      },
+      {
+        "value": 216,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 1
+      }
+    ],
+    "device": {
+      "type": 8,
+      "status": 0,
+      "identnr": 83110187,
+      "version": 37,
+      "accessnr": 25,
+      "manufacturer": 5317
+    }
+  },
+  {
+    "data": [
+      {
+        "value": "2020-06-26T06:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (time & date)",
+        "storagenr": 0
+      },
+      {
+        "value": 0,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 0
+      },
+      {
+        "value": "2019-09-30T00:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (date)",
+        "storagenr": 1
+      },
+      {
+        "value": 446,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 1
+      }
+    ],
+    "device": {
+      "type": 8,
+      "status": 0,
+      "identnr": 83110633,
+      "version": 37,
+      "accessnr": 61,
+      "manufacturer": 5317
+    }
+  },
+  {
+    "data": [
+      {
+        "value": "2020-06-26T06:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (time & date)",
+        "storagenr": 0
+      },
+      {
+        "value": 294,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 0
+      },
+      {
+        "value": "2019-09-30T00:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (date)",
+        "storagenr": 1
+      },
+      {
+        "value": 319,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 1
+      }
+    ],
+    "device": {
+      "type": 8,
+      "status": 0,
+      "identnr": 83110038,
+      "version": 37,
+      "accessnr": 227,
+      "manufacturer": 5317
+    }
+  },
+  {
+    "data": [
+      {
+        "value": "2020-06-26T06:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (time & date)",
+        "storagenr": 0
+      },
+      {
+        "value": 22,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 0
+      },
+      {
+        "value": "2019-09-30T00:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (date)",
+        "storagenr": 1
+      },
+      {
+        "value": 23,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 1
+      }
+    ],
+    "device": {
+      "type": 8,
+      "status": 0,
+      "identnr": 83110184,
+      "version": 37,
+      "accessnr": 24,
+      "manufacturer": 5317
+    }
+  },
+  {
+    "data": [
+      {
+        "value": "2020-06-26T06:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (time & date)",
+        "storagenr": 0
+      },
+      {
+        "value": 93,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 0
+      },
+      {
+        "value": "2019-09-30T00:00:00.000000",
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Time Point (date)",
+        "storagenr": 1
+      },
+      {
+        "value": 144,
+        "tariff": 0,
+        "subunit": 0,
+        "dimension": "Units for H.C.A.",
+        "storagenr": 1
+      }
+    ],
+    "device": {
+      "type": 8,
+      "status": 0,
+      "identnr": 83110033,
+      "version": 37,
+      "accessnr": 225,
+      "manufacturer": 5317
+    }
+  }
+]

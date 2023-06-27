@@ -8,16 +8,21 @@ class MeasurementCreateAPIView(generics.CreateAPIView):
     serializer_class = MeasurementSerializer
 
     def create(self, request, *args, **kwargs):
+        request_data = request.data
         data = {
-            'measurement_datetime': request.data.get('data')[0].get('value'),
-            'device_id': request.data.get('device').get('identnr'),
-            'device_manufacturer': request.data.get('device').get('manufacturer'),
-            'device_type': request.data.get('device').get('type'),
-            'device_version': request.data.get('device').get('version'),
-            'measurement_dimension': request.data.get('data')[1].get('dimension'),
-            'measurement_value': request.data.get('data')[1].get('value'),
-            'measurement_at_duedate': request.data.get('data')[3].get('value'),
-            'duedate_datetime': request.data.get('data')[2].get('value'),
+            'measurement_datetime': request_data.get('data')[0].get('value'),
+            'device_id': request_data.get('device').get('identnr'),
+            'device_manufacturer': request_data.get('device').get(
+                'manufacturer'
+            ),
+            'device_type': request_data.get('device').get('type'),
+            'device_version': request_data.get('device').get('version'),
+            'measurement_dimension': request_data.get('data')[1].get(
+                'dimension'
+            ),
+            'measurement_value': request_data.get('data')[1].get('value'),
+            'measurement_at_duedate': request_data.get('data')[3].get('value'),
+            'duedate_datetime': request_data.get('data')[2].get('value'),
         }
         if data:
             serializer = self.get_serializer(data=data)
