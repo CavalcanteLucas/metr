@@ -1,11 +1,10 @@
 down:
 	docker-compose down
 
-up-rabbitmq:
-	docker-compose up metr-device-rabbitmq --build
+up-gateway:
+	docker-compose up metr-device-rabbitmq --build -d && \
+	sleep 2 && \
+	docker-compose up metr-device-gateway --build
 
-up-consumer:
-	docker-compose up metr-device-consumer --build
-
-up-producer:
-	docker-compose up metr-device-producer --build
+up-sensor:
+	docker-compose up metr-device-sensor --build

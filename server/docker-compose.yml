@@ -24,6 +24,9 @@ services:
       - DB_HOST=${DB_HOST:-metr-server-db}
     networks:
       - metr-network
+    links:
+      - metr-server-redis
+      - metr-server-db
 
   metr-server-db:
     container_name: metr-server-db
@@ -44,6 +47,32 @@ services:
       - POSTGRES_DB=${POSTGRES_DB:-postgres}
       - POSTGRES_USER=${POSTGRES_USER:-postgres}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-password}
+    networks:
+      - metr-network
+
+  metr-server-redis:
+    container_name: metr-server-redis
+    image: redis:alpine
+    networks:
+      - metr-network
+
+  metr-server-celery:
+    container_name: metr-server-celery
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: celery -A server worker --loglevel=DEBUG
+    depends_on:
+      - metr-server-app
+      - metr-server-db
+      - redis
+    volumes:
+      - .:/code
+    env_file:
+      - .env
+    environment:
+      - DB_HOST=${DB_HOST:-metr-server-db}
     networks:
       - metr-network
 

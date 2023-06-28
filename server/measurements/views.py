@@ -1,7 +1,11 @@
 from rest_framework import generics, status
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from django.http import JsonResponse
+from django.shortcuts import render
 
 from .serializers import MeasurementSerializer
+from .tasks import generate_report
 
 
 class MeasurementCreateAPIView(generics.CreateAPIView):
@@ -39,3 +43,13 @@ class MeasurementCreateAPIView(generics.CreateAPIView):
                 {'detail': 'No data provided.'},
                 status=status.HTTP_400_BAD_REQUEST,
             )
+
+
+@api_view(['GET', 'POST'])
+def measurement_report_api_view(request, *args, **kwargs):
+
+    if request.method == 'POST':
+        print('Generating report...')
+        generate_report.delay()
+
+    return render(request, 'measurement_report_api_view.html')

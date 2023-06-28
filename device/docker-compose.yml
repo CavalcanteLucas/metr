@@ -12,11 +12,11 @@ services:
     networks:
       - metr-network
 
-  metr-device-consumer:
-    container_name: metr-device-consumer
+  metr-device-gateway:
+    container_name: metr-device-gateway
     build:
       context: .
-      dockerfile: Dockerfile.consumer
+      dockerfile: Dockerfile.gateway
     depends_on:
       - metr-device-rabbitmq
     links:
@@ -24,11 +24,11 @@ services:
     networks:
       - metr-network
 
-  metr-device-producer:
-    container_name: metr-device-producer
+  metr-device-sensor:
+    container_name: metr-device-sensor
     build:
       context: .
-      dockerfile: Dockerfile.producer
+      dockerfile: Dockerfile.sensor
     depends_on:
       - metr-device-rabbitmq
     links:

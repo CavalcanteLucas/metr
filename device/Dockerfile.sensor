@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 ENV PYTHONUNBUFFERED=1
 
 COPY data/data.json data/data.json
-COPY producer.py .
+COPY sensor.py .
 
-CMD [ "python", "producer.py" ]
+CMD [ "python", "sensor.py" ]

@@ -7,6 +7,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 ENV PYTHONUNBUFFERED=1
 
-COPY consumer.py .
+COPY gateway.py .
 
-CMD [ "python", "consumer.py" ]
+CMD [ "python", "gateway.py" ]
