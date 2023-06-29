@@ -11,7 +11,7 @@ The figure below illustrates the architecture of the project.
 
 ### Requirements
 
-To run the project locally you need to have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) installed. After cloning this repository, follow the steps below:
+To run the project locally you need to have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) installed. After cloning this repository, follow the steps below.
 
 Open a terminal and navigate to the project's root directory. There you will find two directories: `device/` and `server/`.
 ```
@@ -43,10 +43,10 @@ After that, we are good. Go back to the `server` directory and run the following
 make build
 ```
 
-It will create:
-- the network that will connect the device's and server's containers;
-- the database volume;
-- and to build the server's containers.
+It will:
+- create the network that will connect the device's and server's containers;
+- create the database volume;
+- and build the server's containers.
 
 The server's containers have:
 - a Django application that exposes a REST API and an admin panel through port 8000 of the host machine (http://localhost:8000);
@@ -74,7 +74,7 @@ That will be particularly useful for logging in on the admin panel of the Django
 
 ### Device emulator
 
-Now, (optionally open another terminal,) navigate to the `device` directory, and run:
+Now, (optionally open another terminal,) navigate to the `device/` directory, and run:
 ```
 make up
 ```
@@ -112,7 +112,7 @@ Follow the instructions on the screen to download the report.
 4. The server's API stores the measurement in the database;
 5. The server's API sends an HTTP response to the communication gateway.
 
-![image](https://github.com/CavalcanteLucas/metr/assets/17774383/f40add1d-2c16-4b25-accb-da2d3a555713)
+![image](https://github.com/CavalcanteLucas/metr/assets/17774383/c0578ab1-bb1a-4061-bb27-b27bf5b7ed69)
 
 
 ### Workflow for generating reports
