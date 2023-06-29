@@ -19,6 +19,7 @@
         .form-box {
             max-width: 400px;
             padding: 40px;
+            padding-top: 50px;
             border: 1px solid #eee;
             border-radius: 8px;
             background-color: white;
@@ -29,9 +30,20 @@
 
 <body>
     <div class="form-box">
+        {% if not success %}
         <form action="{% url 'measurements-report' %}" method="post" novalidate>
+            {% csrf_token %}
             <button type="submit" class="btn btn-default">Generate report</button>
         </form>
+        {% endif %}
+
+        {% if success %}
+        <p class="form-box-title">
+            Your report is being generated.
+            </br>It will be available <a target=”_blank” href="{{ bucket_link }}">here</a>.
+        </p>
+        <p>Click <a href="{% url 'measurements-report' %}">here</a> to require a new report.</p>
+        {% endif %}
     </div>
 </body>
 

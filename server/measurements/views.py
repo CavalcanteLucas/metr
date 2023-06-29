@@ -1,8 +1,8 @@
 from rest_framework import generics, status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from django.http import JsonResponse
 from django.shortcuts import render
+from django.conf import settings
 
 from .serializers import MeasurementSerializer
 from .tasks import generate_report
@@ -47,9 +47,14 @@ class MeasurementCreateAPIView(generics.CreateAPIView):
 
 @api_view(['GET', 'POST'])
 def measurement_report_api_view(request, *args, **kwargs):
+    context = {}
 
     if request.method == 'POST':
         print('Generating report...')
-        generate_report.delay()
+        context['success'] = generate_report.delay()
 
-    return render(request, 'measurement_report_api_view.html')
+    context[
+        'bucket_link'
+    ] = f'https://drive.google.com/drive/u/0/folders/{settings.BUCKET_ID}'
+
+    return render(request, 'measurement_report_api_view.html', context=context)

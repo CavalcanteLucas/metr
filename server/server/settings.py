@@ -148,3 +148,8 @@ CELERY_RESULT_BACKEND = os.getenv(
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
+
+KEY_FILE_LOCATION = os.getenv(
+    'KEY_FILE_LOCATION', '/code/credentials/credentials.json'
+)
+BUCKET_ID = os.getenv('BUCKET_ID')

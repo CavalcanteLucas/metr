@@ -22,7 +22,9 @@ services:
       - .env
     environment:
       - DB_HOST=${DB_HOST:-metr-server-db}
+      - KEY_FILES_LOCATION=${KEY_FILES_LOCATION:-/code/credentials/credentials.json'}
     networks:
+      - metr-server-network
       - metr-network
     links:
       - metr-server-redis
@@ -35,7 +37,9 @@ services:
       - "5433:5433"
     command: -p 5433
     volumes:
-      - postgres_data:/var/lib/postgresql@14/data
+      - type: volume
+        source: metr-postgres-data
+        target: /var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres"]
       interval: 2s
@@ -48,13 +52,13 @@ services:
       - POSTGRES_USER=${POSTGRES_USER:-postgres}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-password}
     networks:
-      - metr-network
+      - metr-server-network
 
   metr-server-redis:
     container_name: metr-server-redis
     image: redis:alpine
     networks:
-      - metr-network
+      - metr-server-network
 
   metr-server-celery:
     container_name: metr-server-celery
@@ -74,11 +78,14 @@ services:
     environment:
       - DB_HOST=${DB_HOST:-metr-server-db}
     networks:
-      - metr-network
+      - metr-server-network
 
 volumes:
-  postgres_data:
+  metr-postgres-data:
 
 networks:
   metr-network:
-    external: true
+    name: metr-network
+  metr-server-network:
+    name: metr-server-network
+    driver: bridge
